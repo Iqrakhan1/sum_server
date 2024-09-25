@@ -30,7 +30,7 @@ app.get("/mul", (req, res) => {
 
   res.send("Multiplication of " + a + " and " + b + " is = " + sum.toString());
 });
-app.get("/div", (req, res) => {
+app.get("/divison", (req, res) => {
   const a = parseInt(req.query.a);
   const b = parseInt(req.query.b);
   const sum =( a / b).tofixed(3);
