@@ -13,6 +13,27 @@ app.get("/sum", (req, res) => {
   const a = parseInt(req.query.a);
   const b = parseInt(req.query.b);
   const sum = a + b;
-//response send
-  res.send("Sum of " + a + " and " + b + " is =" + sum.toString());
+
+  res.send("Sum of " + a + " and " + b + " is = " + sum.toString());
+});
+app.get("/sub", (req, res) => {
+  const a = parseInt(req.query.a);
+  const b = parseInt(req.query.b);
+  const sum = a - b;
+
+  res.send("Substraction  of " + a + " and " + b + " is = " + sum.toString());
+});
+app.get("/mul", (req, res) => {
+  const a = parseInt(req.query.a);
+  const b = parseInt(req.query.b);
+  const sum = a * b;
+
+  res.send("Multiplication of " + a + " and " + b + " is = " + sum.toString());
+});
+app.get("/div", (req, res) => {
+  const a = parseInt(req.query.a);
+  const b = parseInt(req.query.b);
+  const sum = a / b;
+
+  res.send("division of " + a + " and " + b + " is = " + sum.toString());
 });
