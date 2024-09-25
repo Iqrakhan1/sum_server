@@ -33,7 +33,7 @@ app.get("/mul", (req, res) => {
 app.get("/div", (req, res) => {
   const a = parseInt(req.query.a);
   const b = parseInt(req.query.b);
-  const sum = a / b;
+  const sum =( a / b).tofixed(3);
 
   res.send("division of " + a + " and " + b + " is = " + sum.toString());
 });
