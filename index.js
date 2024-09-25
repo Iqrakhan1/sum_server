@@ -14,5 +14,5 @@ app.get("/sum", (req, res) => {
   const b = parseInt(req.query.b);
   const sum = a + b;
 
-  res.send("sum of " + a + " and " + b + " is =" + sum.toString());
+  res.send("Sum of " + a + " and " + b + " is =" + sum.toString());
 });
