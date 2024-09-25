@@ -16,24 +16,30 @@ app.get("/sum", (req, res) => {
 
   res.send("Sum of " + a + " and " + b + " is = " + sum.toString());
 });
+
 app.get("/sub", (req, res) => {
   const a = parseInt(req.query.a);
   const b = parseInt(req.query.b);
-  const sum = a - b;
+  const sub = a - b;
 
-  res.send("Substraction  of " + a + " and " + b + " is = " + sum.toString());
+  res.send("Subtraction of " + a + " and " + b + " is = " + sub.toString());
 });
+
 app.get("/mul", (req, res) => {
   const a = parseInt(req.query.a);
   const b = parseInt(req.query.b);
-  const sum = a * b;
+  const mul = a * b;
 
-  res.send("Multiplication of " + a + " and " + b + " is = " + sum.toString());
+  res.send("Multiplication of " + a + " and " + b + " is = " + mul.toString());
 });
-app.get("/divison", (req, res) => {
+
+app.get("/division", (req, res) => { 
   const a = parseInt(req.query.a);
   const b = parseInt(req.query.b);
-  const sum =( a / b).tofixed(3);
-
-  res.send("division of " + a + " and " + b + " is = " + sum.toString());
+  if (b === 0) {
+    res.send("Division by zero is not allowed");
+  } else {
+    const div = (a / b).toFixed(3); 
+    res.send("Division of " + a + " and " + b + " is = " + div.toString());
+  }
 });
